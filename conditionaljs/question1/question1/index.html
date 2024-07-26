@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive or Negative Checker</title>
+</head>
+<body>
+
+<script>
+    number = prompt("Enter Number")
+    function checkNumber(number) {
+        if (number > 0) {
+            return `${number} is positive.`;
+        } else if (number < 0) {
+            return `${number} is negative.`;
+        } else {
+            return `${number} is zero.`;
+        }
+    }
+
+    let result = checkNumber(number);
+
+    console.log(result);
+    document.getElementById("result").innerText = result;
+</script>
+
+</body>
+</html>

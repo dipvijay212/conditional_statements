@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertTemperature(value, scale) {
+    let convertedValue;
+    if (scale === 'C') {
+        convertedValue = (value * 9/5) + 32;
+        return `${value}°C is ${convertedValue.toFixed(2)}°F`;
+    } else if (scale === 'F') {
+        convertedValue = (value - 32) * 5/9;
+        return `${value}°F is ${convertedValue.toFixed(2)}°C`;
+    } else {
+        return 'Invalid scale. Please enter "C" for Celsius or "F" for Fahrenheit.';
+    }
+}
+
+const temperature = prompt("Enter the temperature value:");
+const scale = prompt("Enter the scale (C for Celsius, F for Fahrenheit):");
+const result = convertTemperature(Number(temperature), scale.toUpperCase());
+console.log(result);
+
+    </script>
+</body>
+</html>

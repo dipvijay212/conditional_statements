@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function performOperation(num1, num2, operation) {
+        let result;
+        if (operation === "+") {
+          result = num1 + num2;
+        } else if (operation === "-") {
+          result = num1 - num2;
+        } else if (operation === "*") {
+          result = num1 * num2;
+        } else if (operation === "/") {
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            return "Error: Division by zero is not allowed.";
+          }
+        } else {
+          return "Invalid operation. Please enter add, subtract, multiply, or divide.";
+        }
+        return `The result of this Arithmatic operation  ${num1} and ${num2} is: ${result}`;
+      }
+
+      const num1 = parseFloat(prompt("Enter the first number:"));
+      const num2 = parseFloat(prompt("Enter the second number:"));
+      const operation = prompt(
+        "Enter the operation (+, -, *, /):"
+      );
+      const result = performOperation(num1, num2, operation.toLowerCase());
+      console.log(result);
+    </script>
+  </body>
+</html>

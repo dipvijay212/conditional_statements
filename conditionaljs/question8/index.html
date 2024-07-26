@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getDayOfWeek(dayNumber) {
+    let dayOfWeek;
+    if (dayNumber === 1) {
+        dayOfWeek = 'Monday';
+    } else if (dayNumber === 2) {
+        dayOfWeek = 'Tuesday';
+    } else if (dayNumber === 3) {
+        dayOfWeek = 'Wednesday';
+    } else if (dayNumber === 4) {
+        dayOfWeek = 'Thursday';
+    } else if (dayNumber === 5) {
+        dayOfWeek = 'Friday';
+    } else if (dayNumber === 6) {
+        dayOfWeek = 'Saturday';
+    } else if (dayNumber === 7) {
+        dayOfWeek = 'Sunday';
+    } else {
+        dayOfWeek = 'Invalid number. Please enter a number between 1 and 7.';
+    }
+    return dayOfWeek;
+}
+
+const dayNumber = prompt("Enter a number (1-7):");
+const dayOfWeek = getDayOfWeek(Number(dayNumber));
+console.log('The day of the week is: ' + dayOfWeek);
+
+    </script>
+</body>
+</html>

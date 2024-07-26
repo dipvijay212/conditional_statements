@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finding the Largest of Three Numbers</title>
+</head>
+<body>
+
+<script>
+    let number1 = prompt("Enter First Number ");
+    let number2 = prompt("Enter Second Number ");
+    let number3 = prompt("Enter Third Number ");
+    function findLargest(num1, num2, num3) {
+        let largest;
+
+        if (num1 >= num2) {
+            if (num1 >= num3) {
+                largest = num1;
+            } else {
+                largest = num3;
+            }
+        } else {
+            if (num2 >= num3) {
+                largest = num2;
+            } else {
+                largest = num3;
+            }
+        }
+
+        return largest;
+    }
+
+
+    let largestNumber = findLargest(number1, number2, number3);
+
+    console.log(`The largest number among ${number1}, ${number2}, and ${number3} is: ${largestNumber}`);
+
+    document.getElementById("result").innerText = `The largest number among ${number1}, ${number2}, and ${number3} is: ${largestNumber}`;
+</script>
+
+</body>
+</html>

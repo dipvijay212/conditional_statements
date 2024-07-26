@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel or Consonant Checker</title>
+</head>
+<body>
+
+<script>
+    let inputChar = prompt("Enter Char")
+   function checkVowelOrConsonant(char) {
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  char = char.toLowerCase();
+
+  if (vowels.includes(char)) {
+    return "Vowel";
+  } 
+  else if (char >= "a" && char <= "z") {
+    return "Consonant";
+  } 
+  else {
+    return "Neither";
+  }
+}
+console.log(`${inputChar} is a ${checkVowelOrConsonant(inputChar)}`);
+</script>
+
+</body>
+</html>

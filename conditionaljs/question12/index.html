@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Type Checker</title>
+</head>
+<body>
+    <h1>Triangle Type Checker</h1>
+    <label for="sideA">Side A:</label>
+    <input type="number" id="sideA" placeholder="Enter length of side A"><br><br>
+    <label for="sideB">Side B:</label>
+    <input type="number" id="sideB" placeholder="Enter length of side B"><br><br>
+    <label for="sideC">Side C:</label>
+    <input type="number" id="sideC" placeholder="Enter length of side C"><br><br>
+    <button onclick="determineTriangleType()">Check Triangle Type</button>
+    <p id="resultMessage"></p>
+
+    <script>
+        function determineTriangleType() {
+            const sideA = parseFloat(document.getElementById('sideA').value);
+            const sideB = parseFloat(document.getElementById('sideB').value);
+            const sideC = parseFloat(document.getElementById('sideC').value);
+            const resultMessage = document.getElementById('resultMessage');
+            if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+                resultMessage.innerHTML = "The given lengths do not form a valid triangle.";
+                return;
+            }
+
+            let triangleType;
+            if (sideA === sideB && sideB === sideC) {
+                triangleType = "Equilateral";
+            } else if (sideA === sideB || sideA === sideC || sideB === sideC) {
+                triangleType = "Isosceles";
+            } else {
+                triangleType = "Scalene";
+            }
+
+            resultMessage.innerHTML = "The triangle is " + triangleType + ".";
+        }
+    </script>
+</body>
+</html>
